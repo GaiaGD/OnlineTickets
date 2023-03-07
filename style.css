@@ -1,0 +1,131 @@
+html {
+    margin: 0;
+    overscroll-behavior: none;
+  }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+.black {
+    color:#000000;
+}
+
+.grey {
+    color:#999999;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.black-bg {
+    background-color: #000000;
+}
+
+.white-bg {
+    background-color: #ffffff;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+.center-absolute {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url(./assets/OT-hero-img.png) no-repeat center center;
+    background-size: cover;
+}
+
+.reel-bg {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(./assets/OT-hero-reel.png) no-repeat center center;
+    background-size: cover;
+}
+
+.left-30 {
+    left: 30%!important;
+}
+
+.m-sm-n5 {
+    margin-left: -5%;
+}
+
+.m-sm-n2 {
+    margin-left: -2%;
+}
+
+h1.title {
+    font-size: 8em;
+    font-weight: 900;
+    line-height: 0.5;
+}
+
+h1.title.stroke {
+    -webkit-text-fill-color: rgba(0, 0, 0, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.03em;
+    -webkit-text-stroke-color: #DC941D;
+}
+
+.baby-blue {
+    background-color: #579DCB;
+}
+
+.z-n1 {
+    z-index: -10;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.rotate {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.rounded-start-20px {
+    border-bottom-left-radius: 20px!important;
+    border-top-left-radius: 20px!important;
+}
+
+.rounded-end-20px {
+    border-bottom-right-radius: 20px!important;
+    border-top-right-radius: 20px!important;
+}
+
+@media (max-width:575px) {
+
+    h1.title {
+        font-size: 6em;
+    }
+
+    .hero {
+        height: 20vh;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(./assets/OT-hero-img.png) no-repeat center center;
+        background-size: cover;
+    }
+
+    .m-n10 {
+        margin-left: -10%;
+    }
+}
