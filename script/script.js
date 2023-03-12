@@ -1,3 +1,4 @@
+console.log("load")
 
 window.addEventListener('load', resizeFont)
 window.addEventListener('resize', resizeFont)
