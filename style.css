@@ -123,13 +123,7 @@ h1.title.stroke {
         /* background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(./assets/OT-hero-img.png) no-repeat center center; */
         background-size: cover;
     }
-
-    .hero2 {
-        height: 20vh;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(./assets/OT-hero-img-2.png) no-repeat center center;
-        background-size: cover;
-    }
-
+    
     .ms-n8 {
         margin-left: -8%;
     }
