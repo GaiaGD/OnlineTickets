@@ -59,35 +59,39 @@ body {
     background-size: cover;
 }
 
-.height100 {
+.height-sm-100 {
     height: 100vh;
 }
 
-.height80 {
+.height-sm-80 {
     height: 80vh;
 }
 
-.height50 {
+.height-sm-50 {
     height: 50vh;
 }
 
-.height50 {
-    height: 50vh;
-}
-
-.height30 {
+.height-sm-30 {
     height: 30vh;
 }
 
-.height-1 {
+.height-sm-10 {
+    height: 10vh;
+}
+
+.height-sm-3 {
+    height: 3vh;
+}
+
+.height-sm-1 {
     height: 1vh;
 }
 
-.width30 {
+.width-sm-30 {
     width: 30vh;
 }
 
-.mt-n50 {
+.mt-sm-n50 {
     margin-top: -50%;
 }
 
@@ -95,23 +99,23 @@ body {
     margin-right: -50%;
 }
 
-.mt-n20 {
+.mt-sm-n20 {
     margin-top: -20%;
 }
 
-.mt-n15 {
+.mt-sm-n15 {
     margin-top: -15%;
 }
 
-.mt-n8 {
+.mt-sm-n8 {
     margin-top: -8%;
 }
 
-.mt-n6 {
+.mt-sm-n6 {
     margin-top: -6%;
 }
 
-.mt-n2 {
+.mt-sm-n2 {
     margin-top: -2%;
 }
 
@@ -223,11 +227,15 @@ img.transportation {
     border-bottom:  none;
     transform: rotate(135deg);   
 }
-/* 
-.bottom-arrow:hover, .bottom-arrow:focus {
-    border-top:  1px solid #ffffff;
-    border-right:  1px solid #ffffff;
-} */
+
+.bottom-arrow-white {
+    padding: 5px;
+    border-top:  1px solid rgb(255, 255, 255);
+    border-right:  1px solid rgb(255, 255, 255);
+    border-left:  none;
+    border-bottom:  none;
+    transform: rotate(135deg);  
+}
 
 button.tickets {
     height: 2rem;
@@ -244,10 +252,28 @@ button.tickets {
     border-radius: 50%;
 }
 
-.semi-circle {
-    width: 30vh;
-    height: 15vh;
-    border-radius: 0 0 10rem 10rem;
+.circle-container {
+    display: grid;
+    place-items: center;
+}
+
+#text-rotating {
+    height: 20vh;
+    font-size: 0.5em;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+span {
+    position: absolute;
+    transform-origin: 0 10vh;
 }
 
 /* ---------------------------------------------- */
@@ -256,12 +282,35 @@ button.tickets {
 
     .hero {
         height: 20vh;
-        /* background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(./assets/OT-hero-img.png) no-repeat center center; */
         background-size: cover;
     }
     
     .ms-n8 {
         margin-left: -8%;
+    }
+
+    .mt-n50 {
+        margin-top: -50%;
+    }
+    
+    .mt-n20 {
+        margin-top: -20%;
+    }
+    
+    .mt-n15 {
+        margin-top: -15%;
+    }
+    
+    .mt-n8 {
+        margin-top: -8%;
+    }
+    
+    .mt-n6 {
+        margin-top: -6%;
+    }
+    
+    .mt-n2 {
+        margin-top: -2%;
     }
 
     .reel-mobile {
