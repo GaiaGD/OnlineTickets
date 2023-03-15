@@ -257,11 +257,18 @@ button.tickets {
     place-items: center;
 }
 
-#text-rotating {
+#text-rotating-hero {
     height: 20vh;
-    font-size: 0.5em;
+    font-size: 0.6em;
     animation: animate 10s linear infinite;
 }
+
+#text-rotating-black {
+    height: 20vh;
+    font-size: 0.6em;
+    animation: animate 10s linear infinite;
+}
+
 @keyframes animate {
     from {
         transform: rotate(0deg);
