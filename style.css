@@ -27,6 +27,10 @@ body {
     background-color: #ffffff;
 }
 
+.light-grey-bg {
+    background-color: #EBEBEB;
+}
+
 .font-bold {
     font-weight: 700;
 }
@@ -34,6 +38,9 @@ body {
 .font-black {
     font-weight: 900;
 }
+
+/* ---------------------------------------------- */
+/* VENUE PAGE */
 
 .center-absolute {
     top: 0;
@@ -44,9 +51,28 @@ body {
 }
 
 .hero {
-    height: 80vh;
     background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)), url(./assets/OT-hero-img.png) no-repeat center center;
     background-size: cover;
+}
+
+.height100 {
+    height: 100vh;
+}
+
+.height80 {
+    height: 80vh;
+}
+
+.height50 {
+    height: 50vh;
+}
+
+.height50 {
+    height: 50vh;
+}
+
+.mt-n20 {
+    margin-top: -20%;
 }
 
 .mt-n8 {
@@ -80,10 +106,22 @@ h1.title {
     line-height: 0.8;
 }
 
+h2.title {
+    font-size: 6em;
+    font-weight: 900;
+    line-height: 0.8;
+}
+
 h1.title.stroke {
     -webkit-text-fill-color: rgba(0, 0, 0, 0); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 0.03em;
-    -webkit-text-stroke-color: #DC941D;
+    /* -webkit-text-stroke-color: #DC941D; */
+}
+
+h2.title.stroke {
+    -webkit-text-fill-color: rgba(0, 0, 0, 0); /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.03em;
+    /* -webkit-text-stroke-color: #DC941D; */
 }
 
 .baby-blue {
@@ -119,6 +157,50 @@ h1.title.stroke {
     border-bottom-right-radius: 20px!important;
     border-top-right-radius: 20px!important;
 }
+
+/* ---------------------------------------------- */
+/* ARTIST PAGE */
+
+img.transportation {
+    max-height: 60px;
+}
+
+.transportation .active{
+    background-color: #579DCB;
+    border-radius: 50rem!important
+}
+
+.transportation-info {
+    display: none;
+}
+
+.active .transportation-info {
+    display: block;
+}
+
+.dropdown .btn-secondary:hover, .dropdown .btn-secondary:focus {
+    background-color: #579DCB;
+}
+
+.dropdown-toggle::after {
+    padding: 5px;
+    border-top:  1px solid black;
+    border-right:  1px solid black;
+    border-left:  none;
+    border-bottom:  none;
+    transform: rotate(135deg);
+}
+
+button.tickets {
+    height: 2rem;
+    width: 2rem;
+}
+
+.closed .options {
+    display: none;
+}
+
+/* ---------------------------------------------- */
 
 @media (max-width:575px) {
 

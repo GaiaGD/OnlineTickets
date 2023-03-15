@@ -4,7 +4,6 @@ window.addEventListener('load', resizeFont)
 window.addEventListener('resize', resizeFont)
 
     function resizeFont() {
-        console.log("hi")
         let maxWidth = window.innerWidth
 
         if (maxWidth < 576){
@@ -18,4 +17,9 @@ window.addEventListener('resize', resizeFont)
         }
 
     }
-    
+
+
+function toggleInfo(event){
+    let toggled = event.target
+    toggled.classList.toggle("closed")
+}

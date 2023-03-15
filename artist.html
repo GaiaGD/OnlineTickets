@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">        <link rel="stylesheet" href="style.css">
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">        <meta charset="UTF-8">
+
+        <title>Online Tickets</title>
+    </head>
+
+    <body>
+    
+        <!-- NAV -->
+        <div class="position-relative">
+            <div class="position-absolute center-absolute col-sm-10 col-12">
+                <div class="container mt-3">
+                    <div class="row align-items-start">
+                        <div class="col-sm-3 col-7">
+                            <div class="">
+                                <img class="logo img-fluid p-2" src="./assets/Logo/logotype.png" /> 
+                            </div>
+                        </div>
+                        <div class="col-sm-9 col-5">
+                            <ul class="nav justify-content-end align-items-center p-2 px-sm-2 px-0 font-weight-bold text-white flex-sm-row flex-column-reverse">
+                                <li class="nav-item px-3">
+                                    <a class="nav-link text-reset active" href="#">FAQ</a>
+                                </li>
+                                <li class="nav-item px-sm-3 px-0">
+                                    <a class="nav-link text-reset p-0" href="#" tabindex="-1" aria-disabled="true">
+                                        <button type="button" class="btn btn-primary border-0 baby-blue">I lost my ticket</button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO -->
+        <div class="black-bg height100">
+
+            <div class="p-5">
+                <div class="p-5"></div>
+            </div>
+
+            <div class="hero-artist black-bg container">
+                <div class="row">
+                    <div class="col-4">
+                        <img class="img-fluid" src="./assets/brian-adams.png" />
+                    </div>
+                    <div class="col-5">
+                        <div class="d-flex align-items-start flex-column height50">
+                            <div class="mb-auto p-2">
+                                <h2 class="title">BRIAN</h2>
+                                <h2 class="title stroke ps-5" style="-webkit-text-stroke-color: #ffffff;">ADAMS</h2>
+                            </div>
+                            <div class="p-2">
+                                <h4>Thu 26 Oct 2023 Ziggo Dome</h4>
+                                <p class="grey">rock • soft rock • pop rock</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h1 data-splitting>
+                            Text in a circle with Splitting
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-6 my-5">
+                    <div class="transportation">
+                        <div class="d-flex align-items-center my-4">
+                            <img class="img-fluid p-2 transportation" src="./assets/icons/transportation-icon-1.svg" />
+                            <div class="transportation-info">Taxi</div>
+                        </div>
+                    </div>
+                    <div class="transportation">
+                        <div class="active d-flex align-items-center my-4">
+                            <img class="img-fluid p-2 transportation" src="./assets/icons/transportation-icon-2.svg" />
+                            <div class="transportation-info">Bustickets</div>
+                        </div>
+                    </div>
+                    <div class="transportation">
+                        <div class="d-flex align-items-center my-4">
+                            <img class="img-fluid p-2 transportation" src="./assets/icons/transportation-icon-3.svg" />
+                            <div class="transportation-info">CarPool</div>
+                        </div>
+                    </div>
+                    <div class="transportation">
+                        <div class="d-flex align-items-center my-4">
+                            <img class="img-fluid p-2 transportation" src="./assets/icons/transportation-icon-4.svg" />
+                            <div class="transportation-info">Flights</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img class="img-fluid mt-n20" src="./assets/maps.png" />
+                </div>
+                <div class="col-sm-3 col-0">
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- dropdowns -->
+        <div class="container">
+            <div class="col-12">
+                <div class="dropdown my-2 closed">
+                    <button class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Noord-Holland
+                    </button>
+                </div>
+                <div class="dropdown my-2 closed">
+                    <button class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Zuid-Holland
+                    </button>
+                </div>
+                <div class="dropdown my-2 closed" onclick="toggleInfo(event)">
+                    <div class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4">
+                        Noord-Brabant
+                    </div>
+                    <!-- options -->
+                    <div class="my-2 options">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="black-bg p-3 rounded-3">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="black-bg p-3 rounded-3">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="black-bg p-3 rounded-3">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown my-2 closed">
+                    <button class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Limburg
+                    </button>
+                </div>
+                <div class="dropdown my-2 closed">
+                    <button class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Zeeland
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="black-bg">
+            <div class="container">
+                <div class="py-5">
+                    <div class="row justify-content-center p-5">
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between">
+                                <img src="./assets/icons-outline/people.svg" />
+                                <img src="./assets/icons-outline/bus.svg" />
+                                <img src="./assets/icons-outline/airplane.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="white-bg p-3 rounded-3 black">
+                                <div class="pb-2">
+                                    <h4 class="font-bold">€8</h4>
+                                    <h4 class="font-bold">VIP parking</h4>
+                                    <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center mt-5">
+                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">-</p></button>
+                                    <div class="px-4">
+                                        <h5 class="font-bold mb-0">2</h5>
+                                    </div>
+                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">+</p></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="white-bg p-3 rounded-3 black">
+                                <div class="pb-2">
+                                    <h4 class="font-bold">€8</h4>
+                                    <h4 class="font-bold">VIP parking</h4>
+                                    <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center mt-5">
+                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">-</p></button>
+                                    <div class="px-4">
+                                        <h5 class="font-bold mb-0">2</h5>
+                                    </div>
+                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">+</p></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="white-bg p-3 rounded-3 black">
+                                <div class="pb-2">
+                                    <h4 class="font-bold">€8</h4>
+                                    <h4 class="font-bold">VIP parking</h4>
+                                    <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center mt-5">
+                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">-</p></button>
+                                    <div class="px-4">
+                                        <h5 class="font-bold mb-0">2</h5>
+                                    </div>
+                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">+</p></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-5 text-center">
+                        <h2>Wil je een VIP upgrade?</h2>
+                        <p>Mail dan naar info@onlineticket.nl</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="calendar container py-5">
+
+            <div class="my-5">
+                <!-- card -->
+                <div class="row my-3 mx-sm-0 mx-2">
+                    <div class="col-sm-5 col-12">
+                        <h3 class="black font-bold">OCTOBER 2023</h3>
+                    </div>
+                    <div class="col-sm-7 col-12">
+                        <div class="row">
+                            <div class="col-sm-9 col-7 black-bg rounded-start-20px p-4">
+                                <h4 class="mb-0">Kensington</h4>
+                                <p class="grey">dutch indie rock • dutch pop • dutch rock</p>
+                                <p>19 oktober 2023</p>
+                                <div class="d-sm-flex">
+                                    <div class="white-bg rounded-pill black py-2 px-2 me-3 my-2 text-center">Parkeertickets</div>
+                                    <div class="white-bg rounded-pill black py-2 px-2 me-3 my-2 text-center">Bustickets</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-5 rounded-end-20px" style="background-image: url(./assets/card-artist.png); background-size: cover; background-position: center;"> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div class="row my-3 mx-sm-0 mx-2">
+                    <div class="col-sm-5 col-12">
+                    </div>
+                    <div class="col-sm-7 col-12">
+                        <div class="row">
+                            <div class="col-sm-9 col-7 black-bg rounded-start-20px p-4">
+                                <h4 class="mb-0">Kensington</h4>
+                                <p class="grey">dutch indie rock • dutch pop • dutch rock</p>
+                                <p>19 oktober 2023</p>
+                                <div class="d-sm-flex">
+                                    <div class="white-bg rounded-pill black py-2 px-2 me-3 my-2 text-center">Parkeertickets</div>
+                                    <div class="white-bg rounded-pill black py-2 px-2 me-3 my-2 text-center">Bustickets</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-5 rounded-end-20px" style="background-image: url(./assets/card-artist.png); background-size: cover; background-position: center;"> </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- card -->
+                <div class="row my-3 mx-sm-0 mx-2">
+                    <div class="col-sm-5 col-12">
+                    </div>
+                    <div class="col-sm-7 col-12">
+                        <div class="row">
+                            <div class="col-sm-9 col-7 black-bg rounded-start-20px p-4">
+                                <h4 class="mb-0">Kensington</h4>
+                                <p class="grey">dutch indie rock • dutch pop • dutch rock</p>
+                                <p>19 oktober 2023</p>
+                                <div class="d-sm-flex">
+                                    <div class="white-bg rounded-pill black py-2 px-2 me-3 my-2 text-center">Parkeertickets</div>
+                                    <div class="white-bg rounded-pill black py-2 px-2 me-3 my-2 text-center">Bustickets</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-5 rounded-end-20px" style="background-image: url(./assets/card-artist.png); background-size: cover; background-position: center;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card -->
+            <div class="my-5">
+                <div class="row my-3 mx-sm-0 mx-2">
+                    <div class="col-sm-5 col-12">
+                        <h3 class="black font-bold">NOVEMBER 2023</h3>
+                    </div>
+                    <div class="col-sm-7 col-12">
+                        <div class="row">
+                            <div class="col-sm-9 col-7 black-bg rounded-start-20px p-4">
+                                <h4 class="mb-0">Lizzo</h4>
+                                <p class="grey">dutch indie rock • dutch pop • dutch rock</p>
+                                <p>19 oktober 2023</p>
+                                <div class="d-sm-flex">
+                                    <div class="white-bg rounded-pill black py-2 px-2 me-3 my-2 text-center">Parkeertickets</div>
+                                    <div class="white-bg rounded-pill black py-2 px-2 me-3 my-2 text-center">Bustickets</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-5 rounded-end-20px" style="background-image: url(./assets/card-artist.png); background-size: cover; background-position: center;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer black-bg py-5">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-6 col-12">
+                        <div class="">
+                            <small class="grey">Powered by</small>
+                            <div>
+                                <img class="logo img-fluid col-7" src="./assets/Logo/logotype.png" /> 
+                            </div>
+                        </div>
+                        <div class="">
+                            <small class="grey">Part of</small>
+                            <div>
+                                <img class="logo img-fluid col-6 pt-2" src="./assets/Logo/trigion.svg" /> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <h4 class="bold">ABOUT</h4>
+                        <p class="m-0">About OnlineTicket</p>
+                        <p class="m-0">Contact</p>
+                        <p class="m-0">Vacancies</p>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <h4 class="bold">INFO</h4>
+                        <p class="m-0">Privacy Policy</p>
+                        <p class="m-0">Disclaimer</p>
+                        <p class="m-0">Terms & Conditions</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="./script/script.js"></script>
+
+    </body>
+</html>
