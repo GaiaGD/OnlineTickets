@@ -118,20 +118,23 @@
 
         <!-- dropdowns -->
         <div class="container">
-            <div class="col-12">
-                <div class="dropdown my-2 closed">
-                    <button class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Noord-Holland
+            <div class="col-12 mb-5 pb-5">
+                <div class="my-2 closed">
+                    <button class="dropdown light-grey-bg border-0 black font-bold btn btn-secondary col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <p class="mb-0">Noord-Holland</p>
+                        <div class="bottom-arrow"></div>
                     </button>
                 </div>
-                <div class="dropdown my-2 closed">
-                    <button class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Zuid-Holland
+                <div class="my-2 closed">
+                    <button class="dropdown light-grey-bg border-0 black font-bold btn btn-secondary col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <p class="mb-0">Zuid-Holland</p>
+                        <div class="bottom-arrow"></div>
                     </button>
                 </div>
-                <div class="dropdown my-2 closed" onclick="toggleInfo(event)">
-                    <div class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4">
-                        Noord-Brabant
+                <div class="my-2 closed" onclick="toggleInfo(event)">
+                    <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 d-flex">
+                        <p class="mb-0">Noord-Brabant</p>
+                        <div class="bottom-arrow"></div>
                     </div>
                     <!-- options -->
                     <div class="my-2 options">
@@ -191,14 +194,16 @@
                     </div>
                 </div>
 
-                <div class="dropdown my-2 closed">
-                    <button class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Limburg
+                <div class="my-2 closed">
+                    <button class="dropdown light-grey-bg border-0 black font-bold btn btn-secondary col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <p class="mb-0">Limburg</p>
+                        <div class="bottom-arrow"></div>
                     </button>
                 </div>
-                <div class="dropdown my-2 closed">
-                    <button class="light-grey-bg border-0 black font-bold btn btn-secondary dropdown-toggle col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Zeeland
+                <div class="my-2 closed">
+                    <button class="dropdown light-grey-bg border-0 black font-bold btn btn-secondary col-12 d-flex align-items-center justify-content-between p-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <p class="mb-0">Zeeland</p>
+                        <div class="bottom-arrow"></div>
                     </button>
                 </div>
             </div>
@@ -206,13 +211,30 @@
 
         <div class="black-bg">
             <div class="container">
-                <div class="py-5">
+                <div class="d-flex justify-content-center">
+                    <div class="semi-circle white-bg mt-n2">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div>
+                                <p class="black font-bold text-center pt-4">Entrance tickets</p>
+                            </div>
+                            <div>
+                                <div class="bottom-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-5">
                     <div class="row justify-content-center p-5">
-                        <div class="col-6">
-                            <div class="d-flex justify-content-between">
-                                <img src="./assets/icons-outline/people.svg" />
-                                <img src="./assets/icons-outline/bus.svg" />
-                                <img src="./assets/icons-outline/airplane.svg" />
+                        <div class="col-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="p-2" style="background-color: #579DCB; padding: 10px; border-radius: 50%;"> <img src="./assets/icons-outline/people.svg" />
+                                </div>
+                                <div class="p-2">
+                                    <img src="./assets/icons-outline/bus.svg" />
+                                </div>
+                                <div class="p-2">
+                                    <img src="./assets/icons-outline/airplane.svg" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -225,11 +247,11 @@
                                     <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center mt-5">
-                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">-</p></button>
+                                    <button class="tickets rounded-pill black dropdown light-grey-bg border-0"><p class="mb-0">-</p></button>
                                     <div class="px-4">
                                         <h5 class="font-bold mb-0">2</h5>
                                     </div>
-                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">+</p></button>
+                                    <button class="tickets rounded-pill black dropdown light-grey-bg border-0"><p class="mb-0">+</p></button>
                                 </div>
                             </div>
                         </div>
@@ -241,11 +263,11 @@
                                     <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center mt-5">
-                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">-</p></button>
+                                    <button class="tickets rounded-pill black dropdown light-grey-bg border-0"><p class="mb-0">-</p></button>
                                     <div class="px-4">
                                         <h5 class="font-bold mb-0">2</h5>
                                     </div>
-                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">+</p></button>
+                                    <button class="tickets rounded-pill black dropdown light-grey-bg border-0"><p class="mb-0">+</p></button>
                                 </div>
                             </div>
                         </div>
@@ -257,11 +279,11 @@
                                     <h5 class="font-bold">Tegenover de Ziggo Dome</h5>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center mt-5">
-                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">-</p></button>
+                                    <button class="tickets rounded-pill black dropdown light-grey-bg border-0"><p class="mb-0">-</p></button>
                                     <div class="px-4">
                                         <h5 class="font-bold mb-0">2</h5>
                                     </div>
-                                    <button class="tickets rounded-pill black light-grey-bg border-0"><p class="mb-0">+</p></button>
+                                    <button class="tickets rounded-pill black dropdown light-grey-bg border-0"><p class="mb-0">+</p></button>
                                 </div>
                             </div>
                         </div>
@@ -272,9 +294,20 @@
                     </div>
                 </div>
             </div>
-            </div>
         </div>
 
+        <div class="container">
+            <div class="position-relative height30">
+                <div class="position-absolute top-0 start-50 translate-middle">
+                    <div class="height30 width30 p-5 black-bg white rounded-pill"> hi</div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="mt-n15 height30 width30 p-5 black-bg white rounded-pill"> hi</div>
+            </div>
+        </div> -->
 
         <div class="calendar container py-5">
 

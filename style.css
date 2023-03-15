@@ -71,8 +71,32 @@ body {
     height: 50vh;
 }
 
+.height30 {
+    height: 30vh;
+}
+
+.height-1 {
+    height: 1vh;
+}
+
+.width30 {
+    width: 30vh;
+}
+
+.mt-n50 {
+    margin-top: -50%;
+}
+
+.ms-n50 {
+    margin-right: -50%;
+}
+
 .mt-n20 {
     margin-top: -20%;
+}
+
+.mt-n15 {
+    margin-top: -15%;
 }
 
 .mt-n8 {
@@ -81,6 +105,10 @@ body {
 
 .mt-n6 {
     margin-top: -6%;
+}
+
+.mt-n2 {
+    margin-top: -2%;
 }
 
 .reel-bg {
@@ -178,18 +206,24 @@ img.transportation {
     display: block;
 }
 
-.dropdown .btn-secondary:hover, .dropdown .btn-secondary:focus {
+.dropdown:hover, .dropdown:focus {
     background-color: #579DCB;
+    color: #ffffff;
 }
 
-.dropdown-toggle::after {
+.bottom-arrow {
     padding: 5px;
     border-top:  1px solid black;
     border-right:  1px solid black;
     border-left:  none;
     border-bottom:  none;
-    transform: rotate(135deg);
+    transform: rotate(135deg);   
 }
+/* 
+.bottom-arrow:hover, .bottom-arrow:focus {
+    border-top:  1px solid #ffffff;
+    border-right:  1px solid #ffffff;
+} */
 
 button.tickets {
     height: 2rem;
@@ -198,6 +232,18 @@ button.tickets {
 
 .closed .options {
     display: none;
+}
+
+.selected {
+    background-color: #579DCB;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.semi-circle {
+    width: 30vh;
+    height: 15vh;
+    border-radius: 0 0 10rem 10rem;
 }
 
 /* ---------------------------------------------- */
