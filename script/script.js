@@ -38,6 +38,7 @@ textRotatingHero.innerHTML = textRotatingHero.textContent.replace(/\S/g,"<span>$
 const spansToRotate = document.querySelectorAll('span')
 for (var i = 1; i < spansToRotate.length; i++){
     spansToRotate[i].style.transform = "rotate("+i*rotation+"deg)"
+    console.log("rotate("+i*rotation+"deg)")
 }
 
 // MAKE IT MODULAR
@@ -59,9 +60,18 @@ function textSpinner(event){
     const rotation = 360/numOfChars
 
     // split the string in spans
-    textRotatingHero.innerHTML = textRotatingHero.textContent.replace(/\S/g,"<span>$&</span>")
-    console.log(textRotatingHero.innerHTML)
+    let textToAddSpans = textRotatingHero.innerHTML
+    let addedSpans = textToAddSpans.replace(/\S/g,"<span>$&</span> ")
+    console.log(addedSpans)
+
+    const splitSpans = addedSpans.split(" ")    
+    console.log(splitSpans) 
     
+    // let spansRotated = splitSpans.map(span => {
+    //     console.log(span)
+    //     return 
+    // })
+
     // console.log(innerHTML)
     // const spansToRotate = document.querySelectorAll('span')
     // for (var i = 1; i < spansToRotate.length; i++){
