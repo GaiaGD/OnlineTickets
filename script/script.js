@@ -38,45 +38,30 @@ textRotatingHero.innerHTML = textRotatingHero.textContent.replace(/\S/g,"<span>$
 const spansToRotate = document.querySelectorAll('span')
 for (var i = 1; i < spansToRotate.length; i++){
     spansToRotate[i].style.transform = "rotate("+i*rotation+"deg)"
-    console.log("rotate("+i*rotation+"deg)")
 }
 
-// MAKE IT MODULAR
 
-// parameters I need:
-// - ID in the page
-// - how many characters in the string rotating
-// - html replaced with spans
-// - rotate these spans
 
-function textSpinner(event){
-        console.log(event.target.id)
-
-    // id targeted to spin
-    const textRotatingHero = document.getElementById(event.target.id)
-
+function textSpinner(param){
+    console.log(param.id)
+    // id targeted to spin 
+    const textRotatingHero = document.getElementById(param.id)
+    console.log(textRotatingHero)
     // calculate how many letters to spread evenly
     const numOfChars = (textRotatingHero.innerHTML.replace(/\s/g, '')).length
     const rotation = 360/numOfChars
 
-    // split the string in spans
-    let textToAddSpans = textRotatingHero.innerHTML
-    let addedSpans = textToAddSpans.replace(/\S/g,"<span>$&</span> ")
-    console.log(addedSpans)
+    // get all the letters then add <span style="transform: rotate(28.4211deg)">LETTER</span>
+    const charsArray = (textRotatingHero.innerHTML.replace(/\s/g, '')).split(/(?!$)/u)  
 
-    const splitSpans = addedSpans.split(" ")    
-    console.log(splitSpans) 
-    
-    // let spansRotated = splitSpans.map(span => {
-    //     console.log(span)
-    //     return 
-    // })
-
-    // console.log(innerHTML)
-    // const spansToRotate = document.querySelectorAll('span')
-    // for (var i = 1; i < spansToRotate.length; i++){
-    //     spansToRotate[i].style.transform = "rotate("+i*rotation+"deg)"
-    // }
+    charsArray.map((char, index) => {
+        const newSpan = document.createElement("span")
+        newSpan.style.transform = `rotate(${index * rotation}deg)`
+        newSpan.textContent = char
+        textRotatingHero.append(newSpan)
+    })
 
 }
-
+textSpinner(textrotatingtest)
+textSpinner(textrotatingtest2)
+// document.getElementById(textrotatingtest2).innerHTML = textSpinner(textrotatingtest2)
