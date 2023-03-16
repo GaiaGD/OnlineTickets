@@ -24,32 +24,49 @@ function toggleInfo(event){
     toggled.classList.toggle("closed")
 }
 
+// id targeted to spin
 const textRotatingHero = document.getElementById('text-rotating-hero')
 
 // calculate how many letters to spread evenly
 const charsNumbers = (textRotatingHero.innerHTML.replace(/\s/g, '')).length
 const rotation = 360/charsNumbers
 
-textRotatingHero.innerHTML = textRotatingHero.textContent.replace(/\S/g,"<span>$&</span>");
-console.log(textRotatingHero.innerHTML)
+// split the string in spans
+textRotatingHero.innerHTML = textRotatingHero.textContent.replace(/\S/g,"<span>$&</span>")
 
-const ele = document.querySelectorAll('span')
-for (var i = 1; i < ele.length; i++){
-    ele[i].style.transform = "rotate("+i*rotation+"deg)"
+// rotate each span
+const spansToRotate = document.querySelectorAll('span')
+for (var i = 1; i < spansToRotate.length; i++){
+    spansToRotate[i].style.transform = "rotate("+i*rotation+"deg)"
 }
 
 // MAKE IT MODULAR
 
-// const textRotating = document.getElementById('text-rotating-hero')
+// parameters I need:
+// - ID in the page
+// - how many characters in the string rotating
+// - html replaced with spans
+// - rotate these spans
 
-// // calculate how many letters to spread evenly
-// const charsNumbers = (textRotating.innerHTML.replace(/\s/g, '')).length
-// const rotation = 360/charsNumbers
+function textSpinner(event){
+        console.log(event.target.id)
 
-// textRotating.innerHTML = textRotating.textContent.replace(/\S/g,"<span>$&</span>");
-// console.log(textRotating.innerHTML)
+    // id targeted to spin
+    const textRotatingHero = document.getElementById(event.target.id)
 
-// const ele = document.querySelectorAll('span')
-// for (var i = 1; i < ele.length; i++){
-//     ele[i].style.transform = "rotate("+i*rotation+"deg)"
-// }
+    // calculate how many letters to spread evenly
+    const numOfChars = (textRotatingHero.innerHTML.replace(/\s/g, '')).length
+    const rotation = 360/numOfChars
+
+    // split the string in spans
+    textRotatingHero.innerHTML = textRotatingHero.textContent.replace(/\S/g,"<span>$&</span>")
+    console.log(textRotatingHero.innerHTML)
+    
+    // console.log(innerHTML)
+    // const spansToRotate = document.querySelectorAll('span')
+    // for (var i = 1; i < spansToRotate.length; i++){
+    //     spansToRotate[i].style.transform = "rotate("+i*rotation+"deg)"
+    // }
+
+}
+

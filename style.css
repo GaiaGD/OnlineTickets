@@ -266,17 +266,17 @@ button.tickets {
 #text-rotating-black {
     height: 20vh;
     font-size: 0.6em;
-    animation: animate 10s linear infinite;
+    /* animation: animate 10s linear infinite; */
 }
 
-@keyframes animate {
+/* @keyframes animate {
     from {
         transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 span {
     position: absolute;
@@ -290,6 +290,10 @@ span {
     .hero {
         height: 20vh;
         background-size: cover;
+    }
+
+    .height-auto {
+        height: auto;
     }
     
     .ms-n8 {
