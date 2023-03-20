@@ -24,44 +24,34 @@ function toggleInfo(event){
     toggled.classList.toggle("closed")
 }
 
-// id targeted to spin
-const textRotatingHero = document.getElementById('text-rotating-hero')
-
-// calculate how many letters to spread evenly
-const charsNumbers = (textRotatingHero.innerHTML.replace(/\s/g, '')).length
-const rotation = 360/charsNumbers
-
-// split the string in spans
-textRotatingHero.innerHTML = textRotatingHero.textContent.replace(/\S/g,"<span>$&</span>")
-
-// rotate each span
-const spansToRotate = document.querySelectorAll('span')
-for (var i = 1; i < spansToRotate.length; i++){
-    spansToRotate[i].style.transform = "rotate("+i*rotation+"deg)"
-}
-
-
-
 function textSpinner(param){
-    console.log(param.id)
     // id targeted to spin 
     const textRotatingHero = document.getElementById(param.id)
-    console.log(textRotatingHero)
-    // calculate how many letters to spread evenly
-    const numOfChars = (textRotatingHero.innerHTML.replace(/\s/g, '')).length
-    const rotation = 360/numOfChars
 
-    // get all the letters then add <span style="transform: rotate(28.4211deg)">LETTER</span>
-    const charsArray = (textRotatingHero.innerHTML.replace(/\s/g, '')).split(/(?!$)/u)  
+    // get all the letters in one array
+    const charsArray = (textRotatingHero.innerHTML.replace(/\s/g, '')).split(/(?!$)/u)
+    
+    // replace the straight text
+    textRotatingHero.innerHTML = ''
 
-    charsArray.map((char, index) => {
+    // calculate how many letters in the array to spread rotation evenly
+    const rotation = 360/charsArray.length
+
+    textRotatingHero.innerHTML = ''
+    let rotated = charsArray.map((char, index) => {
         const newSpan = document.createElement("span")
         newSpan.style.transform = `rotate(${index * rotation}deg)`
+        newSpan.classList = `circleSize`
         newSpan.textContent = char
         textRotatingHero.append(newSpan)
     })
-
+    
 }
-textSpinner(textrotatingtest)
-textSpinner(textrotatingtest2)
-// document.getElementById(textrotatingtest2).innerHTML = textSpinner(textrotatingtest2)
+
+
+textSpinner(textrotatingHero)
+textSpinner(textrotatingBlack)
+textSpinner(textrotatingWhite)
+
+
+// NOW DELETE INITIAL TEXT
