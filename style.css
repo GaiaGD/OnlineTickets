@@ -255,14 +255,29 @@ button.tickets {
 .circle-container {
     display: grid;
     place-items: center;
+    /* animation: animate 10s linear infinite; */
 }
 
+.rotate {
+    height: 27vh;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 .circleSize {
     transform-origin: 0 13vh;
     font-size: 1rem;
     position: absolute;
 }
+
 
 /* ---------------------------------------------- */
 
