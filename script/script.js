@@ -1,5 +1,6 @@
 console.log("load")
 
+// FONT RESIZING _______________________________
 window.addEventListener('load', resizeFont)
 window.addEventListener('resize', resizeFont)
 
@@ -19,11 +20,12 @@ window.addEventListener('resize', resizeFont)
     }
 
 
-function toggleInfo(event){
-    let toggled = event.target
-    toggled.classList.toggle("closed")
-}
+// function toggleInfo(event){
+//     let toggled = event.target
+//     toggled.classList.toggle("closed")
+// }
 
+// TEXT SPINNING _______________________________
 function textSpinner(param){
     // id targeted to spin 
     const textRotatingHero = document.getElementById(param.id)
@@ -48,10 +50,37 @@ function textSpinner(param){
     
 }
 
-
 textSpinner(textrotatingHero)
 textSpinner(textrotatingBlack)
 textSpinner(textrotatingWhite)
 
 
-// NOW DELETE INITIAL TEXT
+// TEXT SPINNING WHEN IN SCREEN _______________________________
+let prevScrollTop = window.pageYOffset
+let prevScrollDirection = ''
+
+const observer = new IntersectionObserver(
+
+    (entries) => {
+      for (const entry of entries) {
+        window.addEventListener('scroll', function() {
+            console.log("hi")
+        })
+
+        const intersecting = entry.isIntersecting
+        console.log(entry)
+        console.log(entry.boundingClientRect.y)
+        // entry.target.classList = `rotate clockwise`
+      }
+    },
+    // // 👇 Threshold is 100%
+    { threshold:[ .2, .5, .7, 1 ]},
+  )
+
+  const first = document.getElementById('textrotatingHero')
+  const second = document.getElementById('textrotatingBlack')
+  const third = document.getElementById('textrotatingWhite')
+
+//   observer.observe(first)
+  observer.observe(second)
+//   observer.observe(third)
