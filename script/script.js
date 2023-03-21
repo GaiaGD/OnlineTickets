@@ -8,11 +8,9 @@ window.addEventListener('resize', resizeFont)
         let maxWidth = window.innerWidth
 
         if (maxWidth < 576){
-            console.log(maxWidth)
             let textToResizeArray = document.querySelectorAll('.resizedForResponsive')
             let fontSize = maxWidth / 10
             for (i of textToResizeArray){
-
                 i.style.fontSize = fontSize + "px"
             }
         }
@@ -56,31 +54,46 @@ textSpinner(textrotatingWhite)
 
 
 // TEXT SPINNING WHEN IN SCREEN _______________________________
-let prevScrollTop = window.pageYOffset
-let prevScrollDirection = ''
-
 const observer = new IntersectionObserver(
 
     (entries) => {
       for (const entry of entries) {
-        window.addEventListener('scroll', function() {
-            console.log("hi")
-        })
 
-        const intersecting = entry.isIntersecting
-        console.log(entry)
-        console.log(entry.boundingClientRect.y)
-        // entry.target.classList = `rotate clockwise`
+        if (entry.isIntersecting){
+          console.log('intersecting')
+
+          // Initial state  
+          var scrollPos = 0
+          // adding scroll event
+          window.addEventListener('scroll', function() {
+            let direction = ''
+
+            // detects new state and compares it with the new one
+            if ((document.body.getBoundingClientRect()).top > scrollPos)
+              {
+                direction = 'up'
+                console.log(direction)
+              }
+            else
+              {
+                direction = 'down'
+                console.log(direction)
+              }
+                    // saves the new position for iteration.
+              scrollPos = (document.body.getBoundingClientRect()).top
+
+          })
+        } else {
+          console.log('not intersecting')
+        }
       }
-    },
-    // // 👇 Threshold is 100%
-    { threshold:[ .2, .5, .7, 1 ]},
-  )
+    }
+)
 
   const first = document.getElementById('textrotatingHero')
   const second = document.getElementById('textrotatingBlack')
   const third = document.getElementById('textrotatingWhite')
 
 //   observer.observe(first)
-  observer.observe(second)
+  observer.observe(document.getElementById('textrotatingBlack'))
 //   observer.observe(third)
