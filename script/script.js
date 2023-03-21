@@ -60,7 +60,6 @@ const observer = new IntersectionObserver(
       for (const entry of entries) {
 
         if (entry.isIntersecting){
-          console.log('intersecting')
 
           // Initial state  
           var scrollPos = 0
@@ -72,28 +71,31 @@ const observer = new IntersectionObserver(
             if ((document.body.getBoundingClientRect()).top > scrollPos)
               {
                 direction = 'up'
-                console.log(direction)
+                entry.target.classList.add(`rotate`)
+                entry.target.classList.remove(`clockwise`)
+                entry.target.classList.add(`antiClockwise`)
+                // entry.classList.add("mystyle")
               }
             else
               {
                 direction = 'down'
-                console.log(direction)
+                entry.target.classList.add(`rotate`)
+                entry.target.classList.remove(`antiClockwise`)
+                entry.target.classList.add(`clockwise`)
               }
                     // saves the new position for iteration.
               scrollPos = (document.body.getBoundingClientRect()).top
-
           })
-        } else {
-          console.log('not intersecting')
-        }
+        } 
       }
     }
 )
 
-  const first = document.getElementById('textrotatingHero')
-  const second = document.getElementById('textrotatingBlack')
-  const third = document.getElementById('textrotatingWhite')
+  observer.observe(document.getElementById('textrotatingHero'))
+  observer.observe(document.getElementById('textrotatingWhite'))
+  observer.observe(document.getElementById('textrotatingBlack'))
+
 
 //   observer.observe(first)
-  observer.observe(document.getElementById('textrotatingBlack'))
+  // observer.observe(document.getElementById('textrotatingBlack'))
 //   observer.observe(third)

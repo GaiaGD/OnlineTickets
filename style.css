@@ -279,7 +279,7 @@ button.tickets {
     }
 }
 
-@keyframes anticlockwise {
+@keyframes antiClockwise {
     from {
         transform: rotate(360deg);
     }
