@@ -264,10 +264,12 @@ button.tickets {
 
 .clockwise {
     animation: clockwise 10s linear infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .antiClockwise {
     animation: antiClockwise 10s linear infinite;
+    animation-timing-function: ease-in-out, cubic-bezier(0.1, 0.7, 1, 0.1);
 }
 
 @keyframes clockwise {

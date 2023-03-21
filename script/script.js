@@ -65,25 +65,19 @@ const observer = new IntersectionObserver(
           var scrollPos = 0
           // adding scroll event
           window.addEventListener('scroll', function() {
-            let direction = ''
 
             // detects new state and compares it with the new one
             if ((document.body.getBoundingClientRect()).top > scrollPos)
               {
-                direction = 'up'
-                entry.target.classList.add(`rotate`)
                 entry.target.classList.remove(`clockwise`)
                 entry.target.classList.add(`antiClockwise`)
-                // entry.classList.add("mystyle")
               }
             else
               {
-                direction = 'down'
-                entry.target.classList.add(`rotate`)
                 entry.target.classList.remove(`antiClockwise`)
                 entry.target.classList.add(`clockwise`)
               }
-                    // saves the new position for iteration.
+              // saves the new position for iteration.
               scrollPos = (document.body.getBoundingClientRect()).top
           })
         } 
@@ -94,8 +88,3 @@ const observer = new IntersectionObserver(
   observer.observe(document.getElementById('textrotatingHero'))
   observer.observe(document.getElementById('textrotatingWhite'))
   observer.observe(document.getElementById('textrotatingBlack'))
-
-
-//   observer.observe(first)
-  // observer.observe(document.getElementById('textrotatingBlack'))
-//   observer.observe(third)
