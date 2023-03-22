@@ -255,7 +255,6 @@ button.tickets {
 .circle-container {
     display: grid;
     place-items: center;
-    /* animation: animate 10s linear infinite; */
 }
 
 .rotate {
@@ -264,12 +263,12 @@ button.tickets {
 
 .clockwise {
     animation: clockwise 10s linear infinite;
-    animation-timing-function: ease-in-out;
+    /* animation-timing-function: ease-in; */
 }
 
 .antiClockwise {
     animation: antiClockwise 10s linear infinite;
-    animation-timing-function: ease-in-out, cubic-bezier(0.1, 0.7, 1, 0.1);
+    /* animation-timing-function: ease-in; */
 }
 
 @keyframes clockwise {

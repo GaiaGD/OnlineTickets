@@ -29,7 +29,8 @@ function textSpinner(param){
     const textRotatingHero = document.getElementById(param.id)
 
     // get all the letters in one array
-    const charsArray = (textRotatingHero.innerHTML.replace(/\s/g, '')).split(/(?!$)/u)
+    // const charsArray = (textRotatingHero.innerHTML.replace(/\s/g, '')).split(/(?!$)/u)
+    const charsArray = (textRotatingHero.innerHTML).split(/(?!$)/u)
     
     // replace the straight text
     textRotatingHero.innerHTML = ''
@@ -38,19 +39,31 @@ function textSpinner(param){
     const rotation = 360/charsArray.length
 
     textRotatingHero.innerHTML = ''
-    let rotated = charsArray.map((char, index) => {
-        const newSpan = document.createElement("span")
-        newSpan.style.transform = `rotate(${index * rotation}deg)`
-        newSpan.classList = `circleSize`
-        newSpan.textContent = char
-        textRotatingHero.append(newSpan)
+
+    charsArray.map((char, index) => {
+      if(char === " "){
+
+          
+
+          const spaceSpan = document.createElement("span")
+          spaceSpan.style.transform = `rotate(${index * rotation}deg)`
+          spaceSpan.classList = `circleSize`
+          spaceSpan.textContent = ''
+          textRotatingHero.append(spaceSpan)
+        } else {
+          const newSpan = document.createElement("span")
+          newSpan.style.transform = `rotate(${index * rotation}deg)`
+          newSpan.classList = `circleSize`
+          newSpan.textContent = char
+          textRotatingHero.append(newSpan)
+      }
     })
     
 }
 
 textSpinner(textrotatingHero)
-textSpinner(textrotatingBlack)
-textSpinner(textrotatingWhite)
+// textSpinner(textrotatingBlack)
+// textSpinner(textrotatingWhite)
 
 
 // TEXT SPINNING WHEN IN SCREEN _______________________________
