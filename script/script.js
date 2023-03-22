@@ -42,9 +42,6 @@ function textSpinner(param){
 
     charsArray.map((char, index) => {
       if(char === " "){
-
-          
-
           const spaceSpan = document.createElement("span")
           spaceSpan.style.transform = `rotate(${index * rotation}deg)`
           spaceSpan.classList = `circleSize`
@@ -62,8 +59,8 @@ function textSpinner(param){
 }
 
 textSpinner(textrotatingHero)
-// textSpinner(textrotatingBlack)
-// textSpinner(textrotatingWhite)
+textSpinner(textrotatingBlack)
+textSpinner(textrotatingWhite)
 
 
 // TEXT SPINNING WHEN IN SCREEN _______________________________
