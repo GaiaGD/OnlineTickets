@@ -79,13 +79,13 @@ const observer = new IntersectionObserver(
             // detects new state and compares it with the new one
             if ((document.body.getBoundingClientRect()).top > scrollPos)
               {
-                entry.target.classList.remove(`clockwise`)
-                entry.target.classList.add(`antiClockwise`)
+                // entry.target.classList.remove(`clockwise`)
+                // entry.target.classList.add(`antiClockwise`)
               }
             else
               {
-                entry.target.classList.remove(`antiClockwise`)
-                entry.target.classList.add(`clockwise`)
+                // entry.target.classList.remove(`antiClockwise`)
+                // entry.target.classList.add(`clockwise`)
               }
               // saves the new position for iteration.
               scrollPos = (document.body.getBoundingClientRect()).top
@@ -95,6 +95,14 @@ const observer = new IntersectionObserver(
     }
 )
 
-  observer.observe(document.getElementById('textrotatingHero'))
+  // observer.observe(document.getElementById('textrotatingHero'))
   observer.observe(document.getElementById('textrotatingWhite'))
   observer.observe(document.getElementById('textrotatingBlack'))
+
+
+  // element rotating according to how much was scrolled
+  window.onscroll = function (e) {
+    let idToRotate = document.getElementById('textrotatingHero')
+    let currentRotation = idToRotate.style.transform.replace(/[^0-9]/g, "")
+    idToRotate.style.transform = `rotate(${parseFloat(currentRotation) + 1}deg)`
+  }
