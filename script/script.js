@@ -96,13 +96,40 @@ const observer = new IntersectionObserver(
 )
 
   // observer.observe(document.getElementById('textrotatingHero'))
-  observer.observe(document.getElementById('textrotatingWhite'))
-  observer.observe(document.getElementById('textrotatingBlack'))
+  // observer.observe(document.getElementById('textrotatingWhite'))
+  // observer.observe(document.getElementById('textrotatingBlack'))
 
 
   // element rotating according to how much was scrolled
-  window.onscroll = function (e) {
-    let idToRotate = document.getElementById('textrotatingHero')
-    let currentRotation = idToRotate.style.transform.replace(/[^0-9]/g, "")
-    idToRotate.style.transform = `rotate(${parseFloat(currentRotation) + 1}deg)`
+  // window.onscroll = function (e) {
+  //   let idToRotate = document.getElementById('textrotatingHero')
+  //   let currentRotation = idToRotate.style.transform.replace(/[^0-9]/g, "")
+  //   idToRotate.style.transform = `rotate(${parseFloat(currentRotation) + 1}deg)`
+  // }
+
+
+  function incrementScroll(targetId) {
+    let oldPosition = document.documentElement.scrollTop 
+    console.log(oldPosition)
+    window.onscroll = function (e){
+      console.log(oldPosition)
+
+      let currentPosition = document.documentElement.scrollTop
+
+      let idToRotate = document.getElementById(targetId)
+      let currentRotation = idToRotate.style.transform.replace(/[^0-9]/g, "")
+
+      if(oldPosition < currentPosition){
+        idToRotate.style.transform = `rotate(${parseFloat(currentRotation) + 2}deg)`
+      } else if (oldPosition > currentPosition){
+        idToRotate.style.transform = `rotate(${parseFloat(currentRotation) - 2}deg)`
+      }
+
+      oldPosition = currentPosition
+
+    }
   }
+
+  incrementScroll('textrotatingHero')
+  incrementScroll('textrotatingWhite')
+  // incrementScroll('textrotatingBlack')
