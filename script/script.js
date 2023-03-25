@@ -41,11 +41,11 @@ function textSpinner(param){
         const newDiv = document.createElement("div")
         newDiv.style.transform = `rotate(${index * rotation}deg)`
         newDiv.classList = `circleSize`
-        if (char === "I"){
-          c
-          newDiv.style.paddingLeft = '-3px'
-        }
-        newDiv.textContent = char
+        const newSpan = document.createElement("span")
+        newSpan.textContent = char
+        newSpan.style.transform = `rotate(3deg)`
+        newSpan.style.display = `block`
+        newDiv.append(newSpan)
         textRotatingHero.append(newDiv)
     })
     
@@ -55,38 +55,6 @@ textSpinner(textrotatingHero)
 textSpinner(textrotatingBlack)
 textSpinner(textrotatingWhite)
 
-
-// TEXT SPINNING WHEN IN SCREEN _______________________________
-const observer = new IntersectionObserver(
-
-    (entries) => {
-      for (const entry of entries) {
-
-        if (entry.isIntersecting){
-
-          // Initial state  
-          var scrollPos = 0
-          // adding scroll event
-          window.addEventListener('scroll', function() {
-
-            // detects new state and compares it with the new one
-            if ((document.body.getBoundingClientRect()).top > scrollPos)
-              {
-                // entry.target.classList.remove(`clockwise`)
-                // entry.target.classList.add(`antiClockwise`)
-              }
-            else
-              {
-                // entry.target.classList.remove(`antiClockwise`)
-                // entry.target.classList.add(`clockwise`)
-              }
-              // saves the new position for iteration.
-              scrollPos = (document.body.getBoundingClientRect()).top
-          })
-        } 
-      }
-    }
-)
 
 // ____________________________________________________
 
@@ -113,6 +81,48 @@ const observer = new IntersectionObserver(
     })
   }
 
-  // incrementScroll('textrotatingHero')
   incrementScroll('textrotatingBlack')
   incrementScroll('textrotatingWhite')
+
+
+// TREE COUNTER GOING UP _______________________________
+const counterObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+
+      if (entry.isIntersecting){
+          console.log("here it is")
+
+          let counts = setInterval(addOne)
+          let initialCount = 0
+          function addOne(){
+              let count =  document.getElementById(entry.target.id)
+              count.innerHTML = ++ initialCount
+              if(initialCount === 927) {
+                  clearInterval(counts)
+              }
+          }
+
+          counterObserver.unobserve(entry.target)
+      } 
+    }
+  }
+)
+
+counterObserver.observe(document.getElementById('treeCounter'))
+
+const treeIconObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+
+      if (entry.isIntersecting){
+          let treeIcon =  document.getElementById(entry.target.id)
+          treeIcon.classList.add('fadein')
+
+          treeIconObserver.unobserve(entry.target)
+      } 
+    }
+  }
+)
+
+treeIconObserver.observe(document.getElementById('treeIcon'))
