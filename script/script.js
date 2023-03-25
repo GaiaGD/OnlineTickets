@@ -29,7 +29,6 @@ function textSpinner(param){
     const textRotatingHero = document.getElementById(param.id)
 
     // get all the letters in one array
-    // const charsArray = (textRotatingHero.innerHTML.replace(/\s/g, '')).split(/(?!$)/u)
     const charsArray = (textRotatingHero.innerHTML).split(/(?!$)/u)
     
     // replace the straight text
@@ -38,22 +37,16 @@ function textSpinner(param){
     // calculate how many letters in the array to spread rotation evenly
     const rotation = 360/charsArray.length
 
-    textRotatingHero.innerHTML = ''
-
     charsArray.map((char, index) => {
-      if(char === " "){
-          const spaceSpan = document.createElement("span")
-          spaceSpan.style.transform = `rotate(${index * rotation}deg)`
-          spaceSpan.classList = `circleSize`
-          spaceSpan.textContent = ''
-          textRotatingHero.append(spaceSpan)
-        } else {
-          const newSpan = document.createElement("span")
-          newSpan.style.transform = `rotate(${index * rotation}deg)`
-          newSpan.classList = `circleSize`
-          newSpan.textContent = char
-          textRotatingHero.append(newSpan)
-      }
+        const newDiv = document.createElement("div")
+        newDiv.style.transform = `rotate(${index * rotation}deg)`
+        newDiv.classList = `circleSize`
+        if (char === "I"){
+          c
+          newDiv.style.paddingLeft = '-3px'
+        }
+        newDiv.textContent = char
+        textRotatingHero.append(newDiv)
     })
     
 }
@@ -95,11 +88,6 @@ const observer = new IntersectionObserver(
     }
 )
 
-  // observer.observe(document.getElementById('textrotatingHero'))
-  // observer.observe(document.getElementById('textrotatingWhite'))
-  // observer.observe(document.getElementById('textrotatingBlack'))
-
-
 // ____________________________________________________
 
 
@@ -125,6 +113,6 @@ const observer = new IntersectionObserver(
     })
   }
 
-  incrementScroll('textrotatingHero')
+  // incrementScroll('textrotatingHero')
   incrementScroll('textrotatingBlack')
   incrementScroll('textrotatingWhite')
