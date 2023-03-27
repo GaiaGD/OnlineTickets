@@ -339,6 +339,11 @@ button.tickets {
     to   { opacity: 1; }
 }
 
+.hide-text {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 
 
 /* ---------------------------------------------- */

@@ -86,24 +86,33 @@ textSpinner(textrotatingWhite)
 
 
 // TREE COUNTER GOING UP _______________________________
+
 const counterObserver = new IntersectionObserver(
+  
   (entries) => {
+
     for (const entry of entries) {
 
       if (entry.isIntersecting){
-          console.log("here it is")
 
-          let counts = setInterval(addOne)
-          let initialCount = 0
-          function addOne(){
-              let count =  document.getElementById(entry.target.id)
-              count.innerHTML = ++ initialCount
-              if(initialCount === 927) {
-                  clearInterval(counts)
-              }
+        const counter = document.getElementById(entry.target.id)
+        const speed = 200
+        
+        const updateCount = () => {
+          const target = parseInt(counter.getAttribute('data-target'))
+          const count = parseInt(counter.innerText)
+          const increment = Math.trunc(target / speed)
+          if (count < target) {
+            counter.innerText = count + increment
+            setTimeout(updateCount, 1)
+          } else {
+            counter.innerText = target
           }
+        }
+        updateCount()
 
-          counterObserver.unobserve(entry.target)
+        // only execute once
+        counterObserver.unobserve(entry.target)
       } 
     }
   }
