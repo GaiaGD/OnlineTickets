@@ -85,6 +85,7 @@
             </div>
         </div>
 
+        <!-- MAP AND TRANSPORTATION -->
         <div class="container pb-5">
             <div class="row ">
                 <div class="col-sm-3 col-12 my-5">
@@ -122,31 +123,18 @@
         </div>
 
         <!-- dropdowns -->
-        <div class="container mt-5">
-            <div class="col-12 mb-5 pb-5">
-                <div class="my-2 closed">
-                    <button class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded">
+        <div class="container mt-5 mb-0 pb-0">
+            <div class="col-12">
+                <div class="my-2 closed toggle">
+                    <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5 d-flex">
                         <p class="mb-0">Noord-Holland</p>
-                        <div class="bottom-arrow"></div>
-                    </button>
-                </div>
-                <div class="my-2 closed">
-                    <button class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded">
-                        <p class="mb-0">Zuid-Holland</p>
-                        <div class="bottom-arrow"></div>
-                    </button>
-                </div>
-                <div class="my-2 closed" onclick="toggleInfo(event)">
-                    <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded d-flex">
-                        <p class="mb-0">Noord-Brabant</p>
                         <div class="bottom-arrow"></div>
                     </div>
                     <!-- options -->
-
-                    <!-- <div class="my-2 options">
+                    <div class="my-2 hidden">
                         <div class="row">
                             <div class="col-sm-4 col-12">
-                                <div class="black-bg p-3 rounded-3">
+                                <div class="black-bg p-3 rounded-5">
                                     <div class="border-bottom border-dark-subtle pb-2">
                                         <h4 class="font-bold">€8</h4>
                                         <h4 class="font-bold">VIP parking</h4>
@@ -163,7 +151,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-4 col-12">
-                                <div class="black-bg p-3 rounded-3">
+                                <div class="black-bg p-3 rounded-5">
                                     <div class="border-bottom border-dark-subtle pb-2">
                                         <h4 class="font-bold">€8</h4>
                                         <h4 class="font-bold">VIP parking</h4>
@@ -180,7 +168,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-4 col-12">
-                                <div class="black-bg p-3 rounded-3">
+                                <div class="black-bg p-3 rounded-5">
                                     <div class="border-bottom border-dark-subtle pb-2">
                                         <h4 class="font-bold">€8</h4>
                                         <h4 class="font-bold">VIP parking</h4>
@@ -197,33 +185,268 @@
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
-
-                <div class="my-2 closed">
-                    <button class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded">
+                <div class="my-2 closed toggle">
+                    <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5 d-flex">
+                        <p class="mb-0">Zuid-Holland</p>
+                        <div class="bottom-arrow"></div>
+                    </div>
+                    <!-- options -->
+                    <div class="my-2 hidden">
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2 closed toggle">
+                    <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5 d-flex">
+                        <p class="mb-0">Noord-Brabant</p>
+                        <div class="bottom-arrow"></div>
+                    </div>
+                    <!-- options -->
+                    <div class="my-2 hidden">
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2 closed toggle">
+                    <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5 d-flex">
                         <p class="mb-0">Limburg</p>
                         <div class="bottom-arrow"></div>
-                    </button>
+                    </div>
+                    <!-- options -->
+                    <div class="my-2 hidden">
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="my-2 closed">
-                    <button class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded">
+                <div class="my-2 closed toggle">
+                    <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5 d-flex">
                         <p class="mb-0">Zeeland</p>
                         <div class="bottom-arrow"></div>
-                    </button>
+                    </div>
+                    <!-- options -->
+                    <div class="my-2 hidden">
+                        <div class="row">
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-12">
+                                <div class="black-bg p-3 rounded-5">
+                                    <div class="border-bottom border-dark-subtle pb-2">
+                                        <h4 class="font-bold">€8</h4>
+                                        <h4 class="font-bold">VIP parking</h4>
+                                        <h5 class="font-bold">Tegenover de ZIGGO DOME</h5>
+                                    </div>
+                                    <p class="grey font-bold pt-2">Borchlandweg, Amsterdam (10 minuten lopen)</p>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">-</p></button>
+                                        <div class="px-4">
+                                            <h5 class="font-bold mb-0">2</h5>
+                                        </div>
+                                        <button class="tickets rounded-pill black white-bg border-0"><p class="mb-0">+</p></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
-
-        <div class="container mt-n8">
+        <!-- ENTRANCE TICKETS -->
+        <div class="container">
             <div class="position-relative height-sm-30 mt-sm-n2 mt-n20">
-                <div class="position-absolute top-100 start-50 translate-middle  pb-5">
+                <div class="position-absolute top-100 start-50 translate-middle pb-5">
                     <div class="height-sm-30 width-sm-30 p-3 white-bg black rounded-pill d-flex flex-column align-items-center justify-content-center">
                         <div class="d-flex flex-column align-items-center justify-content-center">
                             <div class="pt-5">
-                                <p class="black font-bold text-center pt-4">Entrance tickets</p>
+                                <p class="black font-bold text-center pt-5">Entrance tickets</p>
                             </div>
                             <div>
                                 <div class="bottom-arrow"></div>
@@ -233,13 +456,14 @@
                 </div>
             </div>
         </div>
+        
 
         <div class="black-bg">
             <div class="container">
-                <div class="py-5">
-                    <div class="row justify-content-center p-5 mt-5">
-                        <div class="col-sm-4 col-12">
-                            <div class="d-flex justify-content-between align-items-center">
+                <div class="pt-sm-5 pb-sm-5 pt-0 pb-0">
+                    <div class="row justify-content-center px-sm-5 px-3 py-5">
+                        <div class="col-sm-4 col-12 pt-sm-5 pt-0 p-0">
+                            <div class="d-flex justify-content-between align-items-center pt-sm-0 pt-5 mt-sm-0 mt-5">
                                 <div class="p-2" style="background-color: #579DCB; padding: 10px; border-radius: 50%;"> <img src="./assets/icons-outline/people.svg" />
                                 </div>
                                 <div class="p-2">
@@ -253,7 +477,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-4 col-12">
-                            <div class="white-bg p-3 rounded-3 black m-2 m-sm-0">
+                            <div class="white-bg p-3 rounded-5 black m-2 m-sm-0">
                                 <div class="pb-2">
                                     <h4 class="font-bold">€8</h4>
                                     <h4 class="font-bold">VIP parking</h4>
@@ -269,7 +493,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 col-12">
-                            <div class="white-bg p-3 rounded-3 black m-2 m-sm-0">
+                            <div class="white-bg p-3 rounded-5 black m-2 m-sm-0">
                                 <div class="pb-2">
                                     <h4 class="font-bold">€8</h4>
                                     <h4 class="font-bold">VIP parking</h4>
@@ -285,7 +509,7 @@
                             </div>
                         </div>
                         <div class="col-sm-4 col-12">
-                            <div class="white-bg p-3 rounded-3 black m-2 m-sm-0">
+                            <div class="white-bg p-3 rounded-5 black m-2 m-sm-0">
                                 <div class="pb-2">
                                     <h4 class="font-bold">€8</h4>
                                     <h4 class="font-bold">VIP parking</h4>
@@ -302,7 +526,7 @@
                         </div>
                     </div>
                     <div class="mb-5 pb-5">
-                        <div class="row my-5 text-center">
+                        <div class="row my-5 text-center pb-5">
                             <h2>Wil je een VIP upgrade?</h2>
                             <p>Mail dan naar info@onlineticket.nl</p>
                         </div>
@@ -310,6 +534,9 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- GENERAL INFO -->
 
         <div class="container">
             <div class="position-relative height-sm-30 mt-sm-n2 mt-n15">
@@ -325,12 +552,12 @@
 
         <div class="container">
             <h2 class="light-blue title text-center pb-5 resizedForResponsive">GENERAL INFO</h2>
-            <p class="black px-sm-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="black px-sm-5 pb-sm-0 pb-5 mb-sm-0 mb-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
 
         <div class="container">
             <div class="position-relative height-sm-30 mt-sm-n6 mt-n50">
-                <div class="position-absolute top-100 start-50 translate-middle pb-5">
+                <div class="position-absolute top-100 start-50 translate-middle">
                     <div class="height-sm-30 width-sm-30 p-3 white-bg black rounded-pill">
                         <div class="circle-container">
                             <p class="rotate" style="transform: rotate(20deg);" id="textrotatingWhite">WELCOME TO ZIGGO DOME • WELCOME TO ZIGGO DOME • </p>
@@ -340,6 +567,7 @@
             </div>
         </div>
 
+        <!-- EXTRA INFO -->
         <div class="black-bg">
             <div class="container py-5">
                 <div class="m-5 p-5"></div>
@@ -350,8 +578,9 @@
         </div>
 
 
+        <!-- FAQ -->
         <div class="container">
-            <div class="position-relative height-sm-30 mt-sm-n2 mt-n15">
+            <div class="position-relative height-sm-30 mt-sm-n2">
                 <div class="position-absolute top-0 start-50 translate-middle">
                     <div class="height-sm-30 width-sm-30 p-3 black-bg rounded-pill d-flex flex-column align-items-center justify-content-center">
                         <div class="d-flex flex-column align-items-center justify-content-center">
@@ -367,47 +596,53 @@
             </div>
         </div>
 
-        <!-- dropdowns -->
         <div class="container">
             <div class="row mb-5 pb-5">
                 <div class="col-sm-6 col-12">
-                    <div class="my-2 closed">
-                        <button class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded">
-                            <p class="mb-0">Noord-Holland</p>
-                            <div class="bottom-arrow"></div>
-                        </button>
-                    </div>
-                    <div class="my-2 closed">
-                        <button class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded">
-                            <p class="mb-0">Zuid-Holland</p>
-                            <div class="bottom-arrow"></div>
-                        </button>
-                    </div>
-                    <div class="my-2 closed" onclick="toggleInfo(event)">
-                        <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded d-flex">
-                            <p class="mb-0">Noord-Brabant</p>
+                    <div class="my-2 toggle closed">
+                        <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5">
+                            <p class="mb-0">Zijn er ook kluisjes?</p>
                             <div class="bottom-arrow"></div>
                         </div>
+                        <p class="black py-2 px-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="my-2 toggle closed">
+                        <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5">
+                            <p class="mb-0">Is het 18+ ?</p>
+                            <div class="bottom-arrow"></div>
+                        </div>
+                        <p class="black py-2 px-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    </div>
+                    <div class="mt-2 toggle closed">
+                        <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5 d-flex">
+                            <p class="mb-0">Kan ik parkeren?</p>
+                            <div class="bottom-arrow"></div>
+                        </div>
+                        <p class="black py-2 px-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-12">
-                    <div class="my-2 closed">
-                        <button class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded">
-                            <p class="mb-0">Noord-Holland</p>
-                            <div class="bottom-arrow"></div>
-                        </button>
-                    </div>
-                    <div class="my-2 closed">
-                        <button class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded">
-                            <p class="mb-0">Zuid-Holland</p>
-                            <div class="bottom-arrow"></div>
-                        </button>
-                    </div>
-                    <div class="my-2 closed" onclick="toggleInfo(event)">
-                        <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded d-flex">
-                            <p class="mb-0">Noord-Brabant</p>
+                    <div class="my-2 toggle closed">
+                        <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5">
+                            <p class="mb-0">Hoe laat is de eindtijd?</p>
                             <div class="bottom-arrow"></div>
                         </div>
+                        <p class="black py-2 px-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="my-2 toggle closed">
+                        <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5">
+                            <p class="mb-0">Organiseren jullie dit?</p>
+                            <div class="bottom-arrow"></div>
+                        </div>
+                        <p class="black py-2 px-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="my-2 toggle closed">
+                        <div class="dropdown light-grey-bg border-0 black font-bold col-12 d-flex align-items-center justify-content-between p-4 rounded-5 d-flex">
+                            <p class="mb-0">Kan ik ook de trein pakken?</p>
+                            <div class="bottom-arrow"></div>
+                        </div>
+                        <p class="black py-2 px-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
@@ -451,31 +686,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4 col-12">
-                        <div class="rounded-3 white-bg black p-sm-5 p-3 m-2 m-sm-0">
+                        <div class="rounded-5 white-bg black p-sm-5 p-3 m-2 m-sm-0">
                             <img class="img-fluid" src="./assets/lizzo.png" />
                             <div class="mt-5">
-                                <h1>LIZZO</h1>
-                                <p class="grey">Thu 26 Oct 2023</p>
+                                <h3 class="bold">LIZZO</h3>
+                                <p class="grey mb-0">Thu 26 Oct 2023</p>
                                 <p class="grey">ZIGGO DOME</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4 col-12">
-                        <div class="rounded-3 white-bg black p-sm-5 p-3 m-2 m-sm-0">
+                        <div class="rounded-5 white-bg black p-sm-5 p-3 m-2 m-sm-0">
                             <img class="img-fluid" src="./assets/lizzo.png" />
                             <div class="mt-5">
-                                <h1>LIZZO</h1>
-                                <p class="grey">Thu 26 Oct 2023</p>
+                                <h3 class="bold">LIZZO</h3>
+                                <p class="grey mb-0">Thu 26 Oct 2023</p>
                                 <p class="grey">ZIGGO DOME</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-4 col-12">
-                        <div class="rounded-3 white-bg black p-sm-5 p-3 m-2 m-sm-0">
+                        <div class="rounded-5 white-bg black p-sm-5 p-3 m-2 m-sm-0">
                             <img class="img-fluid" src="./assets/lizzo.png" />
                             <div class="mt-5">
-                                <h1>LIZZO</h1>
-                                <p class="grey">Thu 26 Oct 2023</p>
+                                <h3 class="bold">LIZZO</h3>
+                                <p class="grey mb-0">Thu 26 Oct 2023</p>
                                 <p class="grey">ZIGGO DOME</p>
                             </div>
                         </div>
@@ -490,6 +725,7 @@
 
         </div>
 
+        <!-- SPOTIFY -->
         <div class="p-4 my-5">
             <img class="img-fluid" src="./assets/spotify-plugin.png" />
         </div>

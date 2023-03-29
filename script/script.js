@@ -18,10 +18,24 @@ window.addEventListener('resize', resizeFont)
     }
 
 
-// function toggleInfo(event){
-//     let toggled = event.target
-//     toggled.classList.toggle("closed")
+// function toggleInfo(){
+//     console.log(this)
 // }
+
+
+// const toggleDropdown = document.getElementsByClassName("toggle");
+// toggleDropdown.addEventListener("click", function() {
+//   toggleDropdown.classList.toggle("closed");
+// });
+
+for (let dropdown of document.querySelectorAll('div.toggle'))
+  {
+    dropdown.addEventListener("click", function() {
+    dropdown.classList.toggle("closed");
+    })
+  }
+
+// elem.addEventListener("click", e => alert(`Capturing: ${elem}`))
 
 // TEXT SPINNING _______________________________
 function textSpinner(param){
