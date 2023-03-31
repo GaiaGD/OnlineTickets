@@ -8,6 +8,7 @@ window.addEventListener('resize', resizeFont)
         let maxWidth = window.innerWidth
 
         if (maxWidth < 576){
+            console.log("resize")
             let textToResizeArray = document.querySelectorAll('.resizedForResponsive')
             let fontSize = maxWidth / 10
             for (i of textToResizeArray){
@@ -65,7 +66,8 @@ function textSpinner(param){
     
 }
 
-textSpinner(textrotatingHero)
+textSpinner(textrotatingHeroDesktop)
+textSpinner(textrotatingHeroMobile)
 textSpinner(textrotatingBlack)
 textSpinner(textrotatingWhite)
 

@@ -144,16 +144,8 @@ body {
     margin-left: -2%;
 }
 
-h1.title {
-    font-size: 8em;
+h1.title, h2.title {
     font-weight: 900;
-    line-height: 0.8;
-}
-
-h2.title {
-    font-size: 6em;
-    font-weight: 900;
-    line-height: 0.8;
 }
 
 h1.title.stroke {
@@ -357,6 +349,21 @@ button.tickets {
 
 
 /* ---------------------------------------------- */
+
+@media (min-width:575px) {
+
+    h1.title {
+        font-size: 8em;
+        font-weight: 900;
+        line-height: 0.8;
+    }
+
+    h2.title {
+        font-size: 6em;
+        font-weight: 900;
+        line-height: 0.8;
+    }
+}
 
 @media (max-width:575px) {
 
