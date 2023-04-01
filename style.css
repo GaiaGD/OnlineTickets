@@ -346,7 +346,27 @@ button.tickets {
     overflow-x: hidden;
 }
 
+.autoSlider div:hover > .zoom {
+    transform: scale(1, 1);
+    transition: transform 0.4s;
+}
 
+.autoSlider div:hover > .zoom {
+    transform: scale(1.05, 1.05);
+}
+
+      
+.autoSlider .inner {
+    background-size: cover;
+    transform: scale(1, 1);
+    transition: transform 0.4s;
+}
+
+.autoSlider .inner:hover {
+    transform: scale(1.05, 1.05);
+    -webkit-filter: hue-rotate(296deg) brightness(120%);
+    filter: hue-rotate(296deg) brightness(120%);
+}
 
 /* ---------------------------------------------- */
 
