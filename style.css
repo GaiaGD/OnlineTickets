@@ -79,6 +79,10 @@ body {
     height: 30vh;
 }
 
+.height-20 {
+    height: 20vh;
+}
+
 .height-10 {
     height: 10vh;
 }
@@ -101,10 +105,6 @@ body {
 
 .widthLikeHeight-30 {
     width: 30vh;
-}
-
-.mt-sm-n50 {
-    margin-top: -50%!important;
 }
 
 .ms-n50 {
@@ -401,6 +401,7 @@ button.tickets {
 }
 
 @media (min-width:576px) {
+
     h1.title {
         font-size: 6em;
         font-weight: 900;
@@ -416,6 +417,11 @@ button.tickets {
     .height-sm-100 {
         height: 100vh;
     }
+
+    .height-sm-80 {
+        height: 80vh;
+    }
+    
 }
 
 
