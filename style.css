@@ -63,35 +63,35 @@ body {
     background-size: cover;
 }
 
-.height-sm-100 {
+.height-100 {
     height: 100vh;
 }
 
-.height-sm-80 {
+.height-80 {
     height: 80vh;
 }
 
-.height-sm-50 {
+.height-50 {
     height: 50vh;
 }
 
-.height-sm-30 {
+.height-30 {
     height: 30vh;
 }
 
-.height-sm-10 {
+.height-10 {
     height: 10vh;
 }
 
-.height-sm-4 {
+.height-4 {
     height: 4vh;
 }
 
-.height-sm-3 {
+.height-3 {
     height: 3vh;
 }
 
-.height-sm-1 {
+.height-1 {
     height: 1vh;
 }
 
@@ -99,8 +99,7 @@ body {
     height: 0vh;
 }
 
-
-.width-sm-30 {
+.widthLikeHeight-30 {
     width: 30vh;
 }
 
@@ -112,24 +111,16 @@ body {
     margin-right: -50%!important;
 }
 
-.mt-sm-n20 {
-    margin-top: -20%!important;
-}
-
-.mt-sm-n15 {
-    margin-top: -15%!important;
-}
-
-.mt-sm-n8 {
-    margin-top: -8%!important;
-}
-
-.mt-sm-n6 {
+.mt-n6 {
     margin-top: -6%!important;
 }
 
-.mt-sm-n2 {
+.mt-n2 {
     margin-top: -2%!important;
+}
+    
+.mt-0 {
+    margin-top: 0%!important;
 }
 
 .reel-bg {
@@ -139,14 +130,6 @@ body {
 
 .left-30 {
     left: 30%!important;
-}
-
-.m-sm-n5 {
-    margin-left: -5%;
-}
-
-.m-sm-n2 {
-    margin-left: -2%;
 }
 
 h1.title, h2.title {
@@ -375,13 +358,26 @@ button.tickets {
 
 /* ---------------------------------------------- */
 
-@media (min-width:768px) {
-    .height-md-100 {
+@media (min-width:992px) {
+
+    .height-lg-100 {
         height: 100vh;
+    }
+
+    .height-lg-50 {
+        height: 50vh;
+    }
+
+    .mt-lg-n20 {
+        margin-top: -20%!important;
     }
 }
 
-@media (min-width:575px) {
+@media (min-width:768px) {
+
+    .mt-md-n20 {
+        margin-top: -20%!important;
+    }
 
     h1.title {
         font-size: 8em;
@@ -394,49 +390,84 @@ button.tickets {
         font-weight: 900;
         line-height: 0.8;
     }
+
+    .height-md-100 {
+        height: 100vh;
+    }
+
+    .height-md-50 {
+        height: 50vh;
+    }
 }
+
+@media (min-width:576px) {
+    h1.title {
+        font-size: 6em;
+        font-weight: 900;
+        line-height: 0.8;
+    }
+
+    h2.title {
+        font-size: 4em;
+        font-weight: 900;
+        line-height: 0.8;
+    }
+
+    .height-sm-100 {
+        height: 100vh;
+    }
+}
+
 
 @media (max-width:575px) {
 
-    .hero {
-        height: 20vh;
-        background-size: cover;
+    h1.title {
+        font-size: 3em;
+        font-weight: 900;
+        line-height: 0.8;
     }
 
-    .height-auto {
+    h2.title {
+        font-size: 2em;
+        font-weight: 900;
+        line-height: 0.8;
+    }
+
+    .height-sm-auto {
         height: auto;
     }
     
-    .ms-n8 {
+
+    .height-sm-20 {
+        height: 20vh;
+    }
+    
+    .ms-sm-n8 {
         margin-left: -8%!important;
     }
 
-    .mt-n50 {
+    .mt-sm-n50 {
         margin-top: -50%!important;
     }
     
-    .mt-n20 {
+    .mt-sm-n20 {
         margin-top: -20%!important;
     }
     
-    .mt-n15 {
+    .mt-sm-n15 {
         margin-top: -15%!important;
     }
     
-    .mt-n8 {
+    .mt-sm-n8 {
         margin-top: -8%!important;
     }
     
-    .mt-n6 {
+    .mt-sm-n6 {
         margin-top: -6%!important;
     }
     
-    .mt-n2 {
+    .mt-sm-n2 {
         margin-top: -2%!important;
-    }
-    
-    .mt-0 {
-        margin-top: 0%!important;
     }
 
     .reel-mobile {
@@ -444,4 +475,23 @@ button.tickets {
         background-size: cover;
     }
 
+}
+
+@media (max-height:768px) {
+
+    .landscape-height {
+        height: 50vh;
+    }
+
+    .landscape-width {
+        width: 50vh;
+    }
+
+    .rotate {
+        height: 44vh;
+    }
+
+    .circleSize {
+        transform-origin: 0 23vh;
+    }
 }
