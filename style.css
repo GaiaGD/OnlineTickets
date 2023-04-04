@@ -477,7 +477,7 @@ button.tickets {
 
 }
 
-@media (max-height:768px) {
+@media (max-height:575px) {
 
     .landscape-height {
         height: 50vh;
